@@ -24,6 +24,13 @@ jobs:
       with:
         source_files: README.md
         task_name: Markdown
+  check2:
+    name: Lint2
+    runs-on: ubuntu-latest
+    steps:
+      - uses: DavidAnson/markdownlint-cli2-action@v20
+        with:
+          globs: '**/*.md'
   lint:
     name: Lint
     runs-on: ubuntu-latest
